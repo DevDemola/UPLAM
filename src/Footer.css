@@ -61,4 +61,7 @@
   .footer-section {
     margin-bottom: 2rem;
   }
+  .footer-section .logos{
+    height:60px;
+  }
 }

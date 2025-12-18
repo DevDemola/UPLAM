@@ -1,4 +1,4 @@
-/* HEADER BASE */
+/* COLORS */
 .header {
   display: flex;
   justify-content: space-between;
@@ -9,36 +9,43 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 /* LOGO */
 .header .logo {
-  font-size: 1.6rem;
-  font-weight: bold;
-  letter-spacing: 1px;
+  height: 70px; /* adjust as needed */
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.header .logo:hover {
+  transform: scale(1.05);
 }
 
 /* NAV LINKS */
 .nav {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .nav a {
-  color: #ffffff;
+  color: #ffdca3; /* soft gold */
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.25s;
+  transition: color 0.25s, transform 0.25s;
 }
 
 .nav a:hover,
 .nav a.active {
-  color: #ffdca3; /* soft gold accent */
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
-/* HAMBURGER */
+/* HAMBURGER MENU */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -67,14 +74,13 @@
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-  /* Full-screen overlay menu */
   .nav {
     position: fixed;
     top: 0;
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: rgba(111, 78, 55, 0.95); /* semi-transparent coffee brown overlay */
+    background: rgba(111,78,55,0.95); /* coffee brown overlay */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -89,10 +95,14 @@
   .nav a {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #ffdca3;
   }
 
   .hamburger {
     display: flex;
+  }
+
+  /* Optional: add small padding to logo */
+  .header .logo {
+    height: 65px;
   }
 }

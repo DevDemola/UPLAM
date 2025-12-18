@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-container">
         {/* About */}
         <div className="footer-section">
-          <h3>My Church</h3>
+          <img src="./Logo.png" className="logos" />
           <p>
             A Christ-centered community committed to worship, faith, and love.
           </p>
@@ -17,11 +17,21 @@ const Footer = () => {
         <div className="footer-section links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/events">Events</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/services">Services</a>
+            </li>
+            <li>
+              <a href="/events">Events</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
           </ul>
         </div>
 

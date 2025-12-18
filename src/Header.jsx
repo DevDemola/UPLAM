@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="logo">My Church</div>
+      <img src="./Logo.png" className="logo"/>
 
       <nav className={`nav ${menuOpen ? "active" : ""}`}>
         <NavLink to="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
