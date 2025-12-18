@@ -1,0 +1,141 @@
+.about-us {
+  padding: 6rem 2rem;
+  background-color: #fdf6f0;
+  text-align: center;
+}
+
+.about-us h2 {
+  font-size: 2.6rem;
+  color: #6f4e37; /* coffee brown */
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.about-us h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ffdca3; /* soft gold */
+  margin: 1rem auto 0 auto;
+  border-radius: 2px;
+}
+
+.about-us p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #2c2c2c;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+/* Leaders */
+.church-leaders .leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto 4rem auto;
+}
+
+.leader-card {
+  background-color: #6f4e37; /* coffee brown */
+  color: #ffffff;
+  padding: 2rem 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.leader-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.leader-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.leader-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Ministries / Fun Section */
+.ministries .ministry-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ministry-card {
+  background-color: #ffdca3; /* soft gold */
+  color: #6f4e37; /* coffee brown text */
+  padding: 2rem 1.5rem;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+.ministry-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.ministry-card h3 {
+  margin-bottom: 0.8rem;
+}
+
+.ministry-card p {
+  font-size: 0.95rem;
+}
+/* Gallery */
+.church-gallery {
+  margin: 4rem 0;
+}
+
+.church-gallery h2 {
+  font-size: 2.5rem;
+  color: #6f4e37; /* coffee brown */
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.church-gallery h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ffdca3; /* soft gold */
+  margin: 1rem auto 0 auto;
+  border-radius: 2px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
