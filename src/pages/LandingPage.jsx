@@ -90,7 +90,7 @@ const LandingPage = () => {
 
           <div className="about-image">
             <img
-              src="https://images.pexels.com/photos/267559/pexels-photo-267559.jpeg"
+              src="./photo1.jpg"
               alt="Church worship"
             />
           </div>
@@ -115,7 +115,7 @@ const LandingPage = () => {
 
         <div className="sermon-card">
           <img
-            src="https://images.pexels.com/photos/8468504/pexels-photo-8468504.jpeg"
+            src="./photo2.jpg"
             alt="Sermon"
           />
           <div className="sermon-content">

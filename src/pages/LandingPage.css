@@ -1,11 +1,7 @@
 /* =====================
    GLOBAL RESET
 ===================== */
-main {
-  font-family: "Poppins", sans-serif;
-  background: #f9f7f4;
-  color: #2e2a27;
-}
+
 
 section {
   padding: 5rem 2rem;
@@ -29,7 +25,7 @@ p {
   min-height: 92vh;
   background:
     linear-gradient(rgba(20,16,13,0.65), rgba(20,16,13,0.65)),
-    url("https://images.pexels.com/photos/267559/pexels-photo-267559.jpeg")
+    url("./photo1.jpg")
       center/cover no-repeat;
   display: flex;
   align-items: center;

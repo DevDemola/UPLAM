@@ -8,10 +8,14 @@ const leaders = [
 ];
 
 const gallery = [
-  "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg",
-  "https://images.pexels.com/photos/3184312/pexels-photo-3184312.jpeg",
-  "https://images.pexels.com/photos/2959193/pexels-photo-2959193.jpeg",
-  "https://images.pexels.com/photos/1660993/pexels-photo-1660993.jpeg",
+  "./photo1.jpg",
+  "./photo2.jpg",
+  "./photo3.jpg",
+  "./photo1.jpg",
+  "./photo1.jpg",
+  "./photo1.jpg",
+  "./photo1.jpg",
+  "./photo1.jpg",
 ];
 
 const About = () => {
@@ -19,7 +23,7 @@ const About = () => {
     <section className="about-us">
       {/* About Church */}
       <div className="about-church">
-        <h2>About Our Church</h2>
+        <h2>About UPLAM</h2>
         <p>
           We are a Christ-centered church committed to teaching God’s Word, fostering a welcoming community, and empowering members to live out their faith daily. Our mission is to glorify God, nurture believers, and serve our community with love.
         </p>
@@ -63,10 +67,10 @@ const About = () => {
             <h3>Choir & Music</h3>
             <p>Bringing worship to life through music and praise.</p>
           </div>
-          <div className="ministry-card">
+          {/* <div className="ministry-card">
             <h3>Community Outreach</h3>
             <p>Serving our neighbors and spreading love in action.</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
