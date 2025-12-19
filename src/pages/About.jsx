@@ -2,32 +2,50 @@ import React from "react";
 import "./About.css";
 
 const leaders = [
-  { id: 1, name: "Pastor S.S Osho", role: "Founder/G.O", img: "./photo4.jpg" },
-  { id: 2, name: "Deaconess F.T Osho", role: "Mummy G.O", img: "./photo4.jpg" },
-  { id: 3, name: "Pastor I.O Osho", role: "Lead Pastor", img: "./photo4.jpg" },
+  { id: 1, name: " Late Prophet S.S Osho (JP)", role: "Founder/G.O", img: "./photo6.jpg" },
+  { id: 2, name: "Lady Evang F.T Osho (JP)", role: "Mummy G.O", img: "./photo6.jpg" },
+  { id: 3, name: "Pastor I.O Osho", role: " Active Lead Pastor", img: "./photo6.jpg" },
+  { id: 3, name: "Asst Pastor S.O Osho", role: "Assistant Pastor", img: "./photo6.jpg" },
+  { id: 3, name: "Pastor (Mrs) R.O Osho", role: "Lead Pastor's Wife", img: "./photo6.jpg" },
+  { id: 3, name: "Elder K.A Popoola", role: "Elder", img: "./photo6.jpg" },
+  { id: 3, name: "Elder M.S Odupitan", role: "Elder", img: "./photo6.jpg" },
+  { id: 3, name: "Elder M.O Shobanjo", role: "Elder", img: "./photo6.jpg" },
 ];
 
 const gallery = [
   "./photo1.jpg",
   "./photo2.jpg",
-  "./photo3.jpg",
-  "./photo1.jpg",
-  "./photo1.jpg",
-  "./photo1.jpg",
-  "./photo1.jpg",
-  "./photo1.jpg",
+  // "./photo3.jpg",
+  "./photo9.jpg",
+  "./photo5.jpg",
+  "./photo6.jpg",
+  "./photo7.jpg",
+  "./photo8.jpg",
+  "./photo10.jpg",
 ];
 
 const About = () => {
   return (
     <section className="about-us">
       {/* About Church */}
-      <div className="about-church">
-        <h2>About UPLAM</h2>
-        <p>
-          We are a Christ-centered church committed to teaching God’s Word, fostering a welcoming community, and empowering members to live out their faith daily. Our mission is to glorify God, nurture believers, and serve our community with love.
-        </p>
-      </div>
+    <section className="about-church">
+  <h2>About UPLAM</h2>
+
+  <div className="about-layout">
+    {/* Left: Text */}
+    <div className="about-text">
+      <p>
+        We are a Christ-centered church committed to teaching God’s Word, fostering a welcoming community, and empowering members to live out their faith daily. Our mission is to glorify God, nurture believers, and serve our community with love.
+      </p>
+    </div>
+
+    {/* Right: Image */}
+    <div className="about-image">
+      <img src="./photo11.jpg" alt="Church community" />
+    </div>
+  </div>
+</section>
+
 
       {/* Church Leaders */}
       <div className="church-leaders">

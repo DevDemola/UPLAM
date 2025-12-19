@@ -1,36 +1,56 @@
-/* =====================
-   ABOUT US
-===================== */
-.about-us {
+.about-church {
   padding: 6rem 2rem;
-  background: #f7f8fc;
   text-align: center;
 }
 
-.about-us h2 {
-  font-size: 2.6rem;
-  color: #1e1e1e;
-  margin-bottom: 1.2rem;
-  position: relative;
+.about-church h2 {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: #6458A2;
 }
 
-.about-us h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #6458A2;
-  margin: 1rem auto 0;
-  border-radius: 10px;
+/* Layout */
+.about-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
-.about-us p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #555;
-  max-width: 820px;
-  margin: 0 auto 4rem;
+/* Text */
+.about-text {
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #3f3a35;
 }
+
+/* Image */
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    order: -1; /* image goes on top on mobile */
+    margin-bottom: 2rem;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
 
 /* =====================
    LEADERS
@@ -42,10 +62,15 @@
   max-width: 1100px;
   margin: 0 auto 5rem;
 }
-
+.church-leaders h2{
+  font-size: 2.4rem;
+  text-align: center;
+  color:#6458A2;
+  margin-bottom: 40px;
+}
 .leader-card {
   background: #ffffff;
-  padding: 2rem 1.8rem;
+  /* padding: 2rem 1.8rem; */
   border-radius: 22px;
   box-shadow: 0 18px 45px rgba(0,0,0,0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -61,7 +86,7 @@
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 50%;
   margin-bottom: 1.2rem;
 }
 
@@ -99,7 +124,11 @@
   transform: translateY(-6px);
   box-shadow: 0 22px 50px rgba(0,0,0,0.1);
 }
-
+/* .ministries h2{
+  text-align: center;
+  color:#6458A2;
+  font-size: 2.4rem;
+} */
 .ministry-card h3 {
   color: #6458A2;
   margin-bottom: 0.6rem;
@@ -119,12 +148,13 @@
 
 .church-gallery h2 {
   font-size: 2.4rem;
-  color: #1e1e1e;
+  color:#6458A2;
+  text-align: center;
   margin-bottom: 2.5rem;
   position: relative;
 }
 
-.church-gallery h2::after {
+/* .church-gallery h2::after {
   content: "";
   display: block;
   width: 60px;
@@ -132,7 +162,7 @@
   background: #6458A2;
   margin: 1rem auto 0;
   border-radius: 10px;
-}
+} */
 
 .gallery-grid {
   display: grid;

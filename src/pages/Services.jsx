@@ -1,52 +1,69 @@
 import React from "react";
-import { FaChurch, FaBible, FaPrayingHands, FaUsers } from "react-icons/fa";
 import "./Services.css";
+// import kidsImg from "../../assets/kids-church.jpg";
+// import teensImg from "../../assets/teen-church.jpg";
 
-const   services = [
-  {
-    id: 1,
-    icon: <FaChurch />,
-    title: "Sunday Service",
-    description: "9:00 AM – Experience joyful worship and teaching from the Word.",
-  },
-  {
-    id: 2,
-    icon: <FaPrayingHands />,
-    title: "Midweek Service",
-    description: "Wednesday · 6:00 PM – Connect, pray, and grow in community.",
-  },
-  {
-    id: 3,
-    icon: <FaBible />,
-    title: "Bible Study",
-    description: "Thursday · 7:00 PM – Deepen your understanding of God’s Word.",
-  },
-  {
-    id: 4,
-    icon: <FaUsers />,
-    title: "Prayer Meeting",
-    description: "Friday · 5:30 PM – Join us for heartfelt prayer and fellowship.",
-  },
-];
-
-const Services= () => {
+const Services = () => {
   return (
-    <section className="services-page">
-      <h2>Our Services</h2>
-      <div className="service-grid">
-        {services.map((service) => (
-          <div key={service.id} className="service-card">
-            <div className="service-icon">{service.icon}</div>
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
-          </div>
-        ))}
+    <section className="services">
+      <div className="services-header">
+        <h2>Our Service Experience</h2>
+        <p>
+          We have robust worship environments specially fitted for adults,
+          youths, and children. Come and experience soul-lifting worship,
+          life-transforming word, and prevailing prayers in a family of love.
+        </p>
       </div>
 
-      <div className="service-cta">
-        <h3>Come Join Us!</h3>
-        <p>All are welcome. Worship with us and grow in community.</p>
-        <a href="#hero" className="btn primary">Join Us This Sunday</a>
+      <div className="services-grid">
+        {/* Kids Church */}
+        <div className="service-card">
+          <div
+            className="service-image"
+            style={{ backgroundImage: `url("./photo12.jpg")` }}
+          >
+            <div className="overlay">
+              <h3>SEEDS (Kids Church)</h3>
+            </div>
+          </div>
+          <p>
+            Join Seeds, a fun and engaging space for kids 0–7. Play, learn, and
+            grow closer to God while discovering unique gifts.
+          </p>
+          <button className="learn-btn">Learn More →</button>
+        </div>
+
+        {/* Teen Church */}
+        <div className="service-card">
+          <div
+            className="service-image"
+            style={{ backgroundImage: `url("./photo3.jpg")` }}
+          >
+            <div className="overlay">
+              <h3>GOOD WOMEN</h3>
+            </div>
+          </div>
+          <p>
+            Join us for high-energy worship, real-life topics, and epic events.
+            Discover your purpose, grow your faith, and join the movement!
+          </p>
+          <button className="learn-btn">Learn More →</button>
+        </div>
+        <div className="service-card">
+          <div
+            className="service-image"
+            style={{ backgroundImage: `url("./photo3.jpg")` }}
+          >
+            <div className="overlay">
+              <h3>GOOD MEN</h3>
+            </div>
+          </div>
+          <p>
+            Join us for high-energy worship, real-life topics, and epic events.
+            Discover your purpose, grow your faith, and join the movement!
+          </p>
+          <button className="learn-btn">Learn More →</button>
+        </div>
       </div>
     </section>
   );

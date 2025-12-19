@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        &copy; {new Date().getFullYear()} My Church. All Rights Reserved.
+        &copy; {new Date().getFullYear()} Uplight Apostolic Ministry. All Rights Reserved.
       </div>
     </footer>
   );
