@@ -1,51 +1,68 @@
-/* COLORS */
+/* HEADER BASE */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background: #6f4e37; /* coffee brown */
+  padding: 1rem 2.5rem;
+  background: #6458A2;
   color: #ffffff;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* LOGO */
 .header .logo {
-  height: 70px; /* adjust as needed */
+  height: 52px;
   width: auto;
   object-fit: contain;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
 .header .logo:hover {
   transform: scale(1.05);
 }
 
-/* NAV LINKS */
+/* NAV */
 .nav {
   display: flex;
-  gap: 2rem;
   align-items: center;
+  gap: 2.2rem;
 }
 
 .nav a {
-  color: #ffdca3; /* soft gold */
+  color: #f4f1ff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.25s, transform 0.25s;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+/* underline animation (senior dev touch) */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #f4f1ff;
+  transition: width 0.25s ease;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  width: 100%;
 }
 
 .nav a:hover,
 .nav a.active {
   color: #ffffff;
-  transform: translateY(-2px);
 }
 
-/* HAMBURGER MENU */
+/* HAMBURGER */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -55,7 +72,7 @@
 }
 
 .hamburger span {
-  width: 25px;
+  width: 26px;
   height: 3px;
   background: #ffffff;
   border-radius: 2px;
@@ -72,28 +89,26 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE MENU */
 @media (max-width: 768px) {
   .nav {
     position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    background: rgba(111,78,55,0.95); /* coffee brown overlay */
+    inset: 0;
+    background: rgba(100, 88, 162, 0.97);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    transition: right 0.35s ease;
+    gap: 2.5rem;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
   }
 
   .nav.active {
-    right: 0;
+    transform: translateX(0);
   }
 
   .nav a {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 600;
   }
 
@@ -101,8 +116,7 @@
     display: flex;
   }
 
-  /* Optional: add small padding to logo */
-  .header .logo {
-    height: 65px;
+  .header {
+    padding: 1rem 1.5rem;
   }
 }

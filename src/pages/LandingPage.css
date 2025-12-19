@@ -1,49 +1,56 @@
-/* GLOBAL */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: #fdf6f0;
-  line-height: 1.6;
+/* =====================
+   GLOBAL RESET
+===================== */
+main {
+  font-family: "Poppins", sans-serif;
+  background: #f9f7f4;
+  color: #2e2a27;
 }
 
 section {
-  padding: 6rem 2rem;
-  text-align: center;
+  padding: 5rem 2rem;
 }
 
-/* HERO */
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #4a453f;
+}
+
+/* =====================
+   HERO
+===================== */
 .hero {
-  min-height: 90vh;
-  background: linear-gradient(
-      rgba(111, 78, 55, 0.65),
-      rgba(111, 78, 55, 0.65)
-    ),
-    url("https://images.pexels.com/photos/267559/pexels-photo-267559.jpeg")
+  min-height: 92vh;
+  background:
+    linear-gradient(rgba(20,16,13,0.65), rgba(20,16,13,0.65)),
+    url("./Her.jpeg")
       center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
   text-align: center;
 }
 
 .hero-content {
-  max-width: 720px;
-  padding: 2rem 3rem;
-  border-radius: 20px;
-  backdrop-filter: blur(6px);
-  background: rgba(255, 255, 255, 0.05);
+  max-width: 760px;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 3.1rem;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
 }
 
 .hero p {
-  font-size: 1.3rem;
-  margin-bottom: 2.5rem;
-  color: #f1f1f1;
+  color: #e6e2dc;
+  font-size: 1.2rem;
+  margin-bottom: 2.8rem;
 }
 
 .hero-actions {
@@ -53,179 +60,270 @@ section {
   flex-wrap: wrap;
 }
 
+/* =====================
+   BUTTONS
+===================== */
 .btn {
-  padding: 0.85rem 2.5rem;
-  border-radius: 50px;
+  padding: 0.85rem 2.2rem;
+  border-radius: 999px;
   font-weight: 600;
+  font-size: 15px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+  transition: all 0.25s ease;
 }
 
 .btn.primary {
-  background: #ffdca3; /* soft gold */
-  color: #6f4e37;      /* coffee brown */
+  background: #6458A2;
+  color: #ffffff;
 }
 
 .btn.primary:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  background: #564b92;
+  transform: translateY(-2px);
 }
 
 .btn.secondary {
-  border: 2px solid #ffffff;
+  border: 1.5px solid rgba(255,255,255,0.7);
   color: #ffffff;
 }
 
 .btn.secondary:hover {
-  background: #ffffff;
-  color: #6f4e37;
+  background: rgba(255,255,255,0.12);
 }
 
-/* SERVICES */
+/* =====================
+   SERVICES
+===================== */
 .services {
-  background: #fdf6f0;
-  padding: 7rem 2rem;
-}
-
-.services h2 {
-  font-size: 2.8rem;
-  color: #6f4e37;
-  margin-bottom: 3rem;
-  position: relative;
-}
-
-.services h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 5px;
-  background: #ffdca3;
-  margin: 1rem auto 0 auto;
-  border-radius: 5px;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.service-card {
-  background: #ffffff;
-  border-radius: 25px;
-  padding: 2.5rem 2rem;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.35s ease;
-}
-
-.service-card::before {
-  content: "";
-  position: absolute;
-  top: -40%;
-  left: -40%;
-  width: 180%;
-  height: 180%;
-  background: radial-gradient(circle at center, #ffdca3 0%, transparent 70%);
-  opacity: 0.08;
-  transform: rotate(25deg);
-}
-
-.service-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-.service-card h3 {
-  font-size: 1.4rem;
-  color: #6f4e37;
-  margin-bottom: 1rem;
-}
-
-.service-card p {
-  font-size: 1rem;
-  color: #2c2c2c;
-  line-height: 1.6;
-}
-
-/* ABOUT */
-.about {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, #fdf6f0, #fff1e6);
-  border-radius: 35px;
-  box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+  background: #f6f7fb; /* soft neutral background */
   text-align: center;
 }
 
-.about h2 {
-  font-size: 2.6rem;
-  color: #6f4e37;
-  margin-bottom: 1.5rem;
-  position: relative;
+.services h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+  color: #1f1f1f;
 }
 
-.about h2::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 5px;
-  background: #ffdca3;
-  margin: 1rem auto 0 auto;
-  border-radius: 3px;
-}
-
-.about p {
-  font-size: 1.15rem;
-  color: #2c2c2c;
-  line-height: 1.8;
-  max-width: 700px;
+/* GRID */
+.service-grid {
+  max-width: 1080px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
 }
 
-/* CTA */
-.cta {
-  background: #6f4e37;
+/* CARD */
+.service-card {
+  background: #ffffff;
+  padding: 2.4rem 2.2rem;
+  border-radius: 22px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* TITLE */
+.service-card h3 {
+  color: #6458A2;
+  margin-bottom: 0.7rem;
+  font-size: 1.2rem;
+}
+
+/* TEXT */
+.service-card p {
+  color: #555555;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =====================
+   WHAT TO EXPECT
+===================== */
+.expect {
+  background: #f3f1ee;
+  text-align: center;
+}
+
+.expect h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.expect-grid {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.8rem;
+}
+
+.expect-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 18px;
+}
+
+.expect-card h3 {
+  color: #6458A2;
+  margin-bottom: 0.6rem;
+}
+
+/* =====================
+   ABOUT – WHO WE ARE
+===================== */
+.about {
+  background: #ffffff;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 26px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* =====================
+   MINISTRIES
+===================== */
+.ministries {
+  background: #f3f1ee;
+  text-align: center;
+}
+
+.ministries h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.ministry-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+}
+
+.ministry-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+}
+
+/* =====================
+   FEATURED SERMON
+===================== */
+.sermon {
+  background: #ffffff;
+  text-align: center;
+}
+
+.sermon h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.sermon-card {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  background: #f9f7f4;
+  border-radius: 26px;
+  overflow: hidden;
+}
+
+.sermon-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sermon-content {
+  padding: 3rem;
+  text-align: left;
+}
+
+.sermon-content h3 {
+  color: #6458A2;
+  margin-bottom: 0.8rem;
+}
+
+/* =====================
+   TESTIMONIAL
+===================== */
+.testimonial {
+  background: #6458A2;
   color: #ffffff;
-  padding: 6rem 2rem;
-  /* border-radius: 20px; */
-  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.testimonial p {
+  max-width: 720px;
+  margin: 0 auto 1rem;
+  font-size: 1.25rem;
+  color: #f1effb;
+}
+
+.testimonial h4 {
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+/* =====================
+   CTA
+===================== */
+.cta {
+  background: #2e2a27;
+  color: #ffffff;
+  text-align: center;
 }
 
 .cta h2 {
+  font-size: 2.4rem;
   margin-bottom: 1rem;
-  font-size: 2.6rem;
 }
 
 .cta p {
+  color: #d9d5cf;
   margin-bottom: 2rem;
-  font-size: 1.2rem;
-  color: #ffe5b4;
 }
 
-.cta .btn.primary {
-  background: #ffdca3;
-  color: #6f4e37;
-}
-
-.cta .btn.primary:hover {
-  transform: translateY(-2px) scale(1.05);
-}
-
-/* RESPONSIVE */
+/* =====================
+   RESPONSIVE
+===================== */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
   }
-  .hero p {
-    font-size: 1.15rem;
+
+  .about-container,
+  .sermon-card {
+    grid-template-columns: 1fr;
   }
-  .service-grid {
-    gap: 1.5rem;
+
+  .sermon-card img {
+    height: 240px;
   }
 }

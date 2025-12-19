@@ -1,6 +1,6 @@
 /* FOOTER BASE */
 .footer {
-  background-color: #6f4e37; /* coffee brown */
+  background-color: #6458A2; /* coffee brown */
   color: #ffffff;
   padding: 4rem 2rem 2rem 2rem;
   font-family: 'Poppins', sans-serif;
@@ -16,7 +16,7 @@
 }
 
 .footer-section h3 {
-  color: #ffdca3; /* soft gold */
+  color: white; /* soft gold */
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
