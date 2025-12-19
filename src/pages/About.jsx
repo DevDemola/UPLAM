@@ -2,9 +2,9 @@ import React from "react";
 import "./About.css";
 
 const leaders = [
-  { id: 1, name: "Pastor John Doe", role: "Senior Pastor", img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" },
-  { id: 2, name: "Jane Smith", role: "Youth Leader", img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" },
-  { id: 3, name: "Mark Johnson", role: "Choir Director", img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" },
+  { id: 1, name: "Pastor S.S Osho", role: "Founder/G.O", img: "./photo4.jpg" },
+  { id: 2, name: "Deaconess F.T Osho", role: "Mummy G.O", img: "./photo4.jpg" },
+  { id: 3, name: "Pastor I.O Osho", role: "Lead Pastor", img: "./photo4.jpg" },
 ];
 
 const gallery = [
@@ -64,13 +64,13 @@ const About = () => {
             <p>Engaging young people with fun, faith, and community.</p>
           </div>
           <div className="ministry-card">
-            <h3>Choir & Music</h3>
+            <h3>Spirit-Led Worship</h3>
             <p>Bringing worship to life through music and praise.</p>
           </div>
-          {/* <div className="ministry-card">
+          <div className="ministry-card">
             <h3>Community Outreach</h3>
             <p>Serving our neighbors and spreading love in action.</p>
-          </div> */}
+          </div>
         </div>
       </div>
     </section>
