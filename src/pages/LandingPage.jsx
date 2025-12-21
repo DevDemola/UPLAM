@@ -3,9 +3,9 @@ import "./LandingPage.css";
 import { FaUsers, FaFemale, FaMale, FaMusic } from "react-icons/fa";
 const LandingPage = () => {
   return (
-    <main>
+    <main data-aos="fade-in">
       {/* ================= HERO ================= */}
-      <section className="hero">
+      <section className="hero" data-aos="fade-in">
         <div className="hero-content">
           <h1>Where Faith Meets Community</h1>
           <p>
