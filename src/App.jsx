@@ -7,18 +7,8 @@ import Footer from "./Footer";
 import Services from "./pages/Services";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-
 
 const App = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 800, // animation duration in ms
-      once: true, // animation only once
-    });
-  }, []);
   return (
     <Router>
       <Header />
