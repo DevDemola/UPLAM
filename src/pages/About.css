@@ -1,5 +1,5 @@
 .about-church {
-  padding: 6rem 2rem;
+  /* padding: 6rem 2rem; */
   text-align: center;
 }
 
@@ -86,7 +86,7 @@
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 22px;
   margin-bottom: 1.2rem;
 }
 

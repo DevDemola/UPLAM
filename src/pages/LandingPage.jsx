@@ -174,7 +174,7 @@ const LandingPage = () => {
         <p>No matter where you’re coming from, there’s a place for you.</p>
 
         <a
-          href="https://wa.me/234XXXXXXXXXX"
+          href="https://wa.me/2347040151940"
           target="_blank"
           rel="noopener noreferrer"
           className="btn primary"

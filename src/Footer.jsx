@@ -1,5 +1,12 @@
 import React from "react";
 import "./Footer.css";
+import {
+  FaFacebook,
+  FaFacebookF,
+  FaFacebookSquare,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -38,14 +45,27 @@ const Footer = () => {
         {/* Contact */}
         <div className="footer-section contact">
           <h3>Contact</h3>
-          <p>123 Church Street, City, Country</p>
-          <p>Email: info@mychurch.com</p>
+          <p>10/12 Uplight Street,Bayeku,Ikorodu Lagos, Nigeria</p>
+          <p>Email: info@Uplam.com</p>
           <p>Phone: +234 800 123 4567</p>
+          <span style={{ fontSize: "20px", cursor: "pointer" }}>
+            <FaFacebook />
+          </span>
+          {"    "}
+          <span style={{ fontSize: "20px", cursor: "pointer" }}>
+            <FaInstagram />
+          </span>
+          {"   "}
+          <span style={{ fontSize: "20px", cursor: "pointer" }}>
+            <FaYoutube />
+          </span>
+          {"   "}
         </div>
       </div>
 
       <div className="footer-bottom">
-        &copy; {new Date().getFullYear()} Uplight Apostolic Ministry. All Rights Reserved.
+        &copy; {new Date().getFullYear()} Uplight Apostolic Ministry. All Rights
+        Reserved.
       </div>
     </footer>
   );
