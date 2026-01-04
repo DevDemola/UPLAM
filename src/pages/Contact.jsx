@@ -28,7 +28,7 @@ const Contact = () => {
 
           <div className="contact-info-item">
             <FaMapMarkerAlt />
-            <span>123 Church Street, Lagos, Nigeria</span>
+            <span>10/12 Uplight Street,Bayeku,Ikorodu Lagos, Nigeria</span>
           </div>
         </div>
 
@@ -39,12 +39,7 @@ const Contact = () => {
           method="POST"
         >
           <div className="contact-form-group">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-            />
+            <input type="text" name="name" placeholder="Your Name" required />
           </div>
 
           <div className="contact-form-group">

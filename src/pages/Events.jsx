@@ -1,5 +1,11 @@
 import React from "react";
-import { FaCalendarAlt, FaMusic, FaHandsHelping, FaPrayingHands, FaMicrophone } from "react-icons/fa";
+import {
+  FaCalendarAlt,
+  FaMusic,
+  FaHandsHelping,
+  FaPrayingHands,
+  FaMicrophone,
+} from "react-icons/fa";
 import "./Events.css";
 
 const events = [
@@ -31,14 +37,13 @@ const Events = () => {
     <section className="events">
       <h2>Upcoming Events</h2>
 
-      {/* FEATURED EVENT */}
       <div className="featured-event">
         <div className="featured-content">
           <span className="featured-badge">Featured Event</span>
-          <h3>ALTER OF PRAISE</h3>
+          <h3>ALTAR OF PRAISE</h3>
           <p>
-            A powerful gathering filled with worship, praises, dances and the Word.
-            Come expecting a divine encounter and spiritual renewal.
+            A powerful gathering filled with worship, praises, dances and the
+            Word. Come expecting a divine encounter and spiritual renewal.
           </p>
 
           <div className="featured-meta">
@@ -56,7 +61,6 @@ const Events = () => {
         </div>
       </div>
 
-      {/* EVENTS GRID */}
       <div className="events-grid">
         {events.map(({ id, icon, title, date, description }) => (
           <div key={id} className="event-card">

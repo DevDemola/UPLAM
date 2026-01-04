@@ -1,187 +1,191 @@
+.about-us {
+  background: #faf9ff;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ABOUT CHURCH */
 .about-church {
-  /* padding: 6rem 2rem; */
-  text-align: center;
+  padding: 6.5rem 2rem;
 }
 
 .about-church h2 {
-  font-size: 2.5rem;
-  margin-bottom: 4rem;
+  font-size: 2.4rem;
   color: #6458A2;
+  margin-bottom: 3.5rem;
+  text-align: center;
+  font-weight: 700;
 }
 
-/* Layout */
 .about-layout {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 4.5rem;
   align-items: center;
 }
 
-/* Text */
 .about-text {
-  text-align: left;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.9;
   color: #3f3a35;
 }
 
-/* Image */
 .about-image img {
   width: 100%;
-  border-radius: 20px;
+  height: 420px;
   object-fit: cover;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+  border-radius: 26px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.14);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .about-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .about-image {
-    order: -1; /* image goes on top on mobile */
-    margin-bottom: 2rem;
-  }
-
-  .about-text {
-    text-align: center;
-  }
+/* LEADERS */
+.church-leaders {
+  padding: 6.5rem 2rem;
+  background: #ffffff;
 }
 
-
-/* =====================
-   LEADERS
-===================== */
-.church-leaders .leaders-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2.2rem;
-  max-width: 1100px;
-  margin: 0 auto 5rem;
-}
-.church-leaders h2{
-  font-size: 2.4rem;
+.church-leaders h2 {
+  font-size: 2.3rem;
+  color: #6458A2;
   text-align: center;
-  color:#6458A2;
-  margin-bottom: 40px;
+  margin-bottom: 3.5rem;
+  font-weight: 700;
 }
+
+.leaders-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2.6rem;
+}
+
 .leader-card {
   background: #ffffff;
-  /* padding: 2rem 1.8rem; */
-  border-radius: 22px;
-  box-shadow: 0 18px 45px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
   text-align: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .leader-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 28px 60px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 32px 70px rgba(0,0,0,0.14);
 }
 
 .leader-card img {
   width: 100%;
-  height: 220px;
+  height: 230px;
   object-fit: cover;
-  border-radius: 22px;
-  margin-bottom: 1.2rem;
 }
 
 .leader-card h3 {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
   color: #6458A2;
-  margin-bottom: 0.4rem;
-  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .leader-card p {
   font-size: 0.95rem;
   color: #666;
+  margin-bottom: 1.4rem;
 }
 
-/* =====================
-   MINISTRIES SNAPSHOT
-===================== */
-.ministries .ministry-cards {
+/* GALLERY */
+.church-gallery {
+  padding: 6.5rem 2rem;
+}
+
+.church-gallery h2 {
+  font-size: 2.3rem;
+  color: #6458A2;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.gallery-grid {
+  max-width: 1000px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.8rem;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 16px 35px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-card img:hover {
+  transform: scale(1.03);
+}
+
+/* MINISTRIES */
+.ministries {
+  padding: 6.5rem 2rem;
+  background: linear-gradient(180deg, #ffffff, #f3f2ff);
+}
+
+.ministries h2 {
+  font-size: 2.3rem;
+  color: #6458A2;
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.ministry-cards {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.6rem;
 }
 
 .ministry-card {
   background: #ffffff;
-  padding: 2.2rem 1.8rem;
-  border-radius: 22px;
-  box-shadow: 0 14px 35px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2.6rem 2.2rem;
+  border-radius: 28px;
+  box-shadow: 0 22px 50px rgba(0,0,0,0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .ministry-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 22px 50px rgba(0,0,0,0.1);
+  box-shadow: 0 34px 80px rgba(0,0,0,0.16);
 }
-/* .ministries h2{
-  text-align: center;
-  color:#6458A2;
-  font-size: 2.4rem;
-} */
+
 .ministry-card h3 {
+  font-size: 1.3rem;
   color: #6458A2;
   margin-bottom: 0.6rem;
 }
 
 .ministry-card p {
   font-size: 0.95rem;
+  line-height: 1.7;
   color: #555;
 }
 
-/* =====================
-   GALLERY
-===================== */
-.church-gallery {
-  margin-top: 5rem;
-}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
 
-.church-gallery h2 {
-  font-size: 2.4rem;
-  color:#6458A2;
-  text-align: center;
-  margin-bottom: 2.5rem;
-  position: relative;
-}
+  .about-image img {
+    height: 320px;
+  }
 
-/* .church-gallery h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #6458A2;
-  margin: 1rem auto 0;
-  border-radius: 10px;
-} */
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.6rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.gallery-card img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.gallery-card img:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+  .about-text {
+    text-align: center;
+  }
 }

@@ -1,12 +1,41 @@
 import React from "react";
 import "./LandingPage.css";
 import { FaUsers, FaFemale, FaMale, FaMusic } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.6 },
+  },
+};
+
+const stagger = {
+  visible: {
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
 const LandingPage = () => {
   return (
     <main>
-      {/* ================= HERO ================= */}
       <section className="hero">
-        <div className="hero-content">
+        <motion.div
+          className="hero-content"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+        >
           <h1>Where Faith Meets Community</h1>
           <p>
             Join us in worship, grow in faith, and experience a welcoming family
@@ -21,15 +50,27 @@ const LandingPage = () => {
               Watch Latest Sermon
             </a>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <section className="services">
-        <h2>Worship With Us</h2>
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Worship With Us
+        </motion.h2>
 
         <div className="services-layout">
-          {/* Left: Text */}
-          <div className="service-text">
+          <motion.div
+            className="service-text"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <p>
               Join us for uplifting moments of worship, teaching, and prayer
               throughout the week:
@@ -49,107 +90,156 @@ const LandingPage = () => {
                 9:00 AM – WayOut program.
               </li>
             </ul>
-          </div>
+          </motion.div>
 
-          {/* Right: Image */}
-          <div className="services-image">
+          <motion.div
+            className="services-image"
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <img src="/photo2.jpg" alt="Church service" />
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section className="expect">
-        <h2>What To Expect</h2>
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          What To Expect
+        </motion.h2>
 
-        <div className="expect-grid">
-          <div className="expect-card">
-            <h3>Warm Welcome</h3>
-            <p>You’ll be greeted with love from the moment you arrive.</p>
-          </div>
-
-          <div className="expect-card">
-            <h3>Spirit-Led Worship</h3>
-            <p>Uplifting worship that draws hearts closer to God.</p>
-          </div>
-
-          <div className="expect-card">
-            <h3>Bible-Based Teaching</h3>
-            <p>Practical messages rooted in God’s Word.</p>
-          </div>
-
-          <div className="expect-card">
-            <h3>Come As You Are</h3>
-            <p>No pressure. Just come and experience God’s presence.</p>
-          </div>
-        </div>
+        <motion.div
+          className="expect-grid"
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {[
+            [
+              "Warm Welcome",
+              "You’ll be greeted with love from the moment you arrive.",
+            ],
+            [
+              "Spirit-Led Worship",
+              "Uplifting worship that draws hearts closer to God.",
+            ],
+            [
+              "Bible-Based Teaching",
+              "Practical messages rooted in God’s Word.",
+            ],
+            [
+              "Come As You Are",
+              "No pressure. Just come and experience God’s presence.",
+            ],
+          ].map(([title, text], index) => (
+            <motion.div key={index} className="expect-card" variants={fadeUp}>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </section>
 
-      {/* ================= WHO WE ARE ================= */}
       <section className="about">
-        <h2>Who We Are</h2>
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Who We Are
+        </motion.h2>
 
         <div className="about-layout">
-          {/* Left: Text */}
-          <div className="about-text">
+          <motion.div
+            className="about-text"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <p>
-              We are a Christ-centered church passionate about teaching God’s
-              Word and building a community where lives are transformed.
+              We are a Christ-centered church committed to teaching the truth of
+              God’s Word and nurturing a community where lives are genuinely
+              transformed. Our heart is to create a place where people can
+              encounter God, grow in faith, and experience His love in a real
+              and personal way. Through sound biblical teaching, sincere
+              worship, and strong fellowship, we equip believers to live with
+              purpose and confidence. Our mission is to welcome, equip, and
+              empower people to walk out their faith daily, impacting their
+              families, communities, and the world for Christ.
             </p>
-            <p>
-              Our mission is to welcome, equip, and empower believers to live
-              out their faith daily.
-            </p>
-            <ul className="about-list">
-              <li>
-                <strong className="strong">Faithful Teaching:</strong> Grounded
-                in the Word of God.
-              </li>
-              <li>
-                <strong className="strong">Community:</strong> Building lasting
-                relationships.
-              </li>
-              <li>
-                <strong className="strong">Empowerment:</strong> Helping
-                believers live purposefully.
-              </li>
-            </ul>
-          </div>
+          </motion.div>
 
-          {/* Right: Image */}
-          <div className="about-image">
+          <motion.div
+            className="about-image"
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <img src="./photo5.jpg" alt="Church worship" />
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section className="ministries">
-        <h2>Our Ministries</h2>
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Our Ministries
+        </motion.h2>
 
-        <div className="ministry-grid">
-          <div className="ministry-card">
-            <FaUsers className="ministry-icon" />
-            Youth Ministry
-          </div>
-          <div className="ministry-card">
-            <FaFemale className="ministry-icon" />
-            Women Fellowship
-          </div>
-          <div className="ministry-card">
-            <FaMale className="ministry-icon" />
-            Men Fellowship
-          </div>
-          <div className="ministry-card">
-            <FaMusic className="ministry-icon" />
-            Choir & Worship Team
-          </div>
-        </div>
+        <motion.div
+          className="ministry-grid"
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {[FaUsers, FaFemale, FaMale, FaMusic].map((Icon, index) => (
+            <motion.div key={index} className="ministry-card" variants={fadeUp}>
+              <Icon className="ministry-icon" />
+              {
+                [
+                  "Youth Ministry",
+                  "Women Fellowship",
+                  "Men Fellowship",
+                  "Choir & Worship Team",
+                ][index]
+              }
+            </motion.div>
+          ))}
+        </motion.div>
       </section>
 
-      {/* ================= FEATURED SERMON ================= */}
       <section className="sermon" id="sermon">
-        <h2>Featured Sermon</h2>
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Featured Sermon
+        </motion.h2>
 
-        <div className="sermon-card">
+        <motion.div
+          className="sermon-card"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <img src="./photo6.jpg" alt="Sermon" />
           <div className="sermon-content">
             <h3>Walking in Faith</h3>
@@ -158,30 +248,28 @@ const LandingPage = () => {
               Watch Sermon
             </a>
           </div>
-        </div>
+        </motion.div>
       </section>
 
-      {/* <section className="testimonial">
-        <p>
-          “This church gave me a place to grow spiritually and find genuine
-          community. It truly feels like home.”
-        </p>
-        <h4>— Church Member</h4>
-      </section> */}
-
-      {/* ================= CTA ================= */}
       <section className="cta">
-        <h2>You Are Welcome Here</h2>
-        <p>No matter where you’re coming from, there’s a place for you.</p>
-
-        <a
-          href="https://wa.me/2347040151940"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn primary"
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
-          Talk to Us on WhatsApp
-        </a>
+          <h2>You Are Welcome Here</h2>
+          <p>No matter where you’re coming from, there’s a place for you.</p>
+
+          <a
+            href="https://wa.me/2347040151940"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn primary"
+          >
+            Talk to Us on WhatsApp
+          </a>
+        </motion.div>
       </section>
     </main>
   );
