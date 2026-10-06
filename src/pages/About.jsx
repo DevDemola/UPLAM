@@ -1,207 +1,139 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { FiBookOpen, FiHeart, FiUsers, FiSun } from "react-icons/fi";
+import { site } from "../data/site";
+import { leaders, initials } from "../data/leaders";
+import { usePageMeta } from "../lib/hooks";
+import { PageHero, Photo, Reveal, SectionHeading } from "../components/ui";
+import { CtaBand } from "../components/blocks";
 import "./About.css";
 
-const leaders = [
-  {
-    id: 1,
-    name: "Late Prophet S.S Osho (JP)",
-    role: "Founder/G.O",
-    img: "./photo6.jpg",
-  },
-  {
-    id: 2,
-    name: "Lady Evang F.T Osho (JP)",
-    role: "Mummy G.O",
-    img: "./photo6.jpg",
-  },
-  {
-    id: 3,
-    name: "Pastor I.O Osho",
-    role: "Active Lead Pastor",
-    img: "./photo6.jpg",
-  },
-  {
-    id: 4,
-    name: "Asst Pastor S.O Osho",
-    role: "Assistant Pastor",
-    img: "./photo6.jpg",
-  },
-  {
-    id: 5,
-    name: "Pastor (Mrs) R.O Osho",
-    role: "Lead Pastor's Wife",
-    img: "./photo6.jpg",
-  },
-  { id: 6, name: "Elder K.A Popoola", role: "Elder", img: "./photo6.jpg" },
-  { id: 7, name: "Elder M.S Odupitan", role: "Elder", img: "./photo6.jpg" },
-  { id: 8, name: "Elder M.O Shobanjo", role: "Elder", img: "./photo6.jpg" },
+const pillars = [
+  { Icon: FiBookOpen, title: "Rooted in the Word", text: "Sound, practical Bible teaching that equips believers to live with purpose and confidence." },
+  { Icon: FiSun, title: "Spirit-led worship", text: "Sincere, joyful worship that makes room for people to genuinely encounter God." },
+  { Icon: FiHeart, title: "Devoted to prayer", text: "From WayOut mornings to monthly night vigils, prayer is the heartbeat of our church." },
+  { Icon: FiUsers, title: "A real family", text: "Strong fellowship across every generation — from SEEDS kids to our elders." },
 ];
 
-const gallery = [
-  "./photo1.jpg",
-  "./photo2.jpg",
-  "./photo3.jpg",
-  "./photo4.jpg",
-  "./photo5.jpg",
-  "./photo6.jpg",
-  "./photo7.jpg",
-  "./photo8.jpg",
-  "./photo9.jpg",
-  "./photo10.jpg",
-  "./photo11.jpg",
-  "./photo12.jpg",
-  "./photo13.jpg",
-  "./photo14.jpg",
-  "./photo15.jpg",
-  "./photo16.jpg",
-  "./photo17.jpg",
-  "./photo18.jpg",
-  "./photo19.jpg",
-  "./photo20.jpg",
-  "./photo21.jpg",
-  "./photo22.jpg",
-  "./photo23.jpg",
-];
+export default function About() {
+  usePageMeta("About us", "The story, beliefs and leadership of Uplight Apostolic Ministry in Bayeku, Ikorodu, Lagos.");
 
-const reveal = {
-  hidden: { opacity: 0, y: 60 },
-  visible: { opacity: 1, y: 0 },
-};
+  const lead = leaders.filter((l) => l.lead || l.memorial);
+  const team = leaders.filter((l) => !l.lead && !l.memorial);
 
-const About = () => {
   return (
-    <section className="about-us">
-      <motion.section
-        className="about-church"
-        variants={reveal}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.9, ease: "easeOut" }}
-      >
-        <h2>About UPLAM</h2>
+    <>
+      <PageHero
+        eyebrow="About UPLAM"
+        title="A light set on a hill in Ikorodu."
+        lede="We exist to welcome, equip and empower people to walk out their faith daily — impacting their families, communities and the world for Christ."
+        image="photo13"
+        position="50% 35%"
+      />
 
-        <div className="about-layout">
-          <motion.div
-            className="about-text"
-            variants={reveal}
-            transition={{ duration: 0.8, delay: 0.1 }}
-          >
-            <p>
-              We are a Christ-centered church committed to teaching the truth of
-              God’s Word and nurturing a community where lives are genuinely
-              transformed. Our heart is to create a place where people can
-              encounter God, grow in faith, and experience His love in a real
-              and personal way. Through sound biblical teaching, sincere
-              worship, and strong fellowship, we equip believers to live with
-              purpose and confidence. Our mission is to welcome, equip, and
-              empower people to walk out their faith daily, impacting their
-              families, communities, and the world for Christ.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="about-image"
-            variants={reveal}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <img src="./photo11.jpg" alt="Church community" />
-          </motion.div>
+      {/* Story */}
+      <section className="section" aria-labelledby="story-title">
+        <div className="container story">
+          <Reveal className="story__text">
+            <p className="eyebrow">Our story</p>
+            <h2 id="story-title">Fifteen years of God’s faithfulness.</h2>
+            <div className="prose">
+              <p className="lede">
+                Uplight Apostolic Ministry was founded by the late Prophet S.S. Osho (JP). Our name and
+                our vision — a “Vision of Joy” — flow from {site.scripture.ref}: wherever God speaks, light
+                breaks through.
+              </p>
+              <p>
+                From our home in Bayeku, Ikorodu, we have grown into a church family with eight ministries
+                serving children, youth, women and men. In September 2024 we
+                celebrated our 15th anniversary — a season of thanksgiving themed “Celebrating God’s
+                Faithfulness.”
+              </p>
+              <p>
+                Today, under the leadership of Pastor I.O. Osho, we continue to be a Christ-centred church
+                committed to teaching the truth of God’s Word and nurturing a community where lives are
+                genuinely transformed.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal className="story__media" delay={0.1}>
+            <div className="frame story__photo">
+              <Photo name="photo11" alt="The entrance decorated for UPLAM's 15th anniversary celebration" />
+            </div>
+            <div className="story__badge">
+              <span className="story__badge-num">15</span>
+              <span>years of<br />faithfulness</span>
+            </div>
+          </Reveal>
         </div>
-      </motion.section>
+      </section>
 
-      <motion.section
-        className="church-leaders"
-        variants={reveal}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.9 }}
-      >
-        <h2>Meet Our Leaders</h2>
-
-        <div className="leaders-grid">
-          {leaders.map((leader, index) => (
-            <motion.div
-              key={leader.id}
-              className="leader-card"
-              variants={reveal}
-              transition={{ duration: 0.6, delay: index * 0.08 }}
-            >
-              <img src={leader.img} alt={leader.name} />
-              <h3>{leader.name}</h3>
-              <p>{leader.role}</p>
-            </motion.div>
-          ))}
+      {/* Mission pillars */}
+      <section className="section section--tint" aria-labelledby="pillars-title">
+        <div className="container">
+          <SectionHeading
+            id="pillars-title"
+            eyebrow="What we value"
+            title="Everything we do flows from four commitments."
+          />
+          <ul role="list" className="pillars">
+            {pillars.map(({ Icon, title, text }, i) => (
+              <Reveal as="li" key={title} className="pillar card" delay={i * 0.06}>
+                <span className="pillar__icon" aria-hidden="true">
+                  <Icon />
+                </span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </Reveal>
+            ))}
+          </ul>
         </div>
-      </motion.section>
+      </section>
 
-      <motion.section
-        className="church-gallery"
-        variants={reveal}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.9 }}
-      >
-        <h2>Church Moments</h2>
+      {/* Leadership */}
+      <section className="section" aria-labelledby="leaders-title">
+        <div className="container">
+          <SectionHeading
+            id="leaders-title"
+            eyebrow="Leadership"
+            title="Shepherds who serve."
+            lede="Our pastors and elders give oversight, care and direction to the UPLAM family."
+          />
 
-        <div className="gallery-grid">
-          {gallery.map((img, index) => (
-            <motion.div
-              key={index}
-              className="gallery-card"
-              variants={reveal}
-              transition={{ duration: 0.6, delay: index * 0.05 }}
-            >
-              <img src={img} alt={`Church event ${index + 1}`} />
-            </motion.div>
-          ))}
+          <div className="leaders-featured">
+            {lead.map((l, i) => (
+              <Reveal key={l.name} className={`leader-feature${l.memorial ? " leader-feature--memorial" : ""}`} delay={i * 0.08}>
+                <Avatar leader={l} size="lg" />
+                <div>
+                  {l.memorial && <p className="leader-feature__tag">In loving memory</p>}
+                  <h3>{l.name}</h3>
+                  <p>{l.role}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <ul role="list" className="leaders-grid">
+            {team.map((l, i) => (
+              <Reveal as="li" key={l.name} className="leader" delay={i * 0.05}>
+                <Avatar leader={l} />
+                <div>
+                  <h3>{l.name}</h3>
+                  <p>{l.role}</p>
+                </div>
+              </Reveal>
+            ))}
+          </ul>
         </div>
-      </motion.section>
+      </section>
 
-      <motion.section
-        className="ministries"
-        variants={reveal}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.9 }}
-      >
-        <h2>Our Ministries</h2>
-
-        <div className="ministry-cards">
-          <motion.div
-            className="ministry-card"
-            variants={reveal}
-            transition={{ duration: 0.6 }}
-          >
-            <h3>Youth Fellowship</h3>
-            <p>Engaging young people with fun, faith, and community.</p>
-          </motion.div>
-
-          <motion.div
-            className="ministry-card"
-            variants={reveal}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <h3>Spirit-Led Worship</h3>
-            <p>Bringing worship to life through music and praise.</p>
-          </motion.div>
-
-          <motion.div
-            className="ministry-card"
-            variants={reveal}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h3>Community Outreach</h3>
-            <p>Serving our neighbors and spreading love in action.</p>
-          </motion.div>
-        </div>
-      </motion.section>
-    </section>
+      <CtaBand image="photo3" />
+    </>
   );
-};
+}
 
-export default About;
+function Avatar({ leader, size = "md" }) {
+  return (
+    <span className={`avatar avatar--${size}`} aria-hidden="true">
+      {leader.image ? <img src={leader.image} alt="" loading="lazy" /> : initials(leader.name)}
+    </span>
+  );
+}

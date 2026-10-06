@@ -1,0 +1,202 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgb(251 250 247 / 0.86);
+  backdrop-filter: saturate(1.4) blur(14px);
+  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur), box-shadow var(--dur);
+}
+.site-header.is-scrolled {
+  border-color: var(--line);
+  box-shadow: 0 6px 24px -18px rgb(31 27 46 / 0.4);
+}
+.site-header__bar {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-l);
+}
+
+/* Brand */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.brand img {
+  width: 48px;
+  height: auto;
+}
+.brand__text {
+  display: grid;
+  line-height: 1;
+}
+.brand__name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--purple-700);
+  letter-spacing: -0.01em;
+}
+.brand__sub {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+/* Desktop nav */
+.site-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.site-nav a {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-pill);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--dur-fast), background var(--dur-fast);
+}
+.site-nav a:hover {
+  color: var(--ink);
+  background: var(--purple-50);
+}
+.site-nav a.active {
+  color: var(--purple-700);
+  font-weight: 600;
+}
+.site-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--brand);
+  transform: translateX(-50%);
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+/* Menu toggle */
+.menu-toggle {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--purple-50);
+}
+.menu-toggle span {
+  position: absolute;
+  left: 13px;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--ink);
+  transition: transform var(--dur) var(--ease-out), top var(--dur) var(--ease-out);
+}
+.menu-toggle span:first-child {
+  top: 18px;
+}
+.menu-toggle span:last-child {
+  top: 24px;
+}
+.is-open .menu-toggle span:first-child {
+  top: 21px;
+  transform: rotate(45deg);
+}
+.is-open .menu-toggle span:last-child {
+  top: 21px;
+  transform: rotate(-45deg);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  inset: var(--header-h) 0 0 0;
+  z-index: 999;
+  background: var(--paper);
+  padding: var(--space-l) var(--gutter) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+.mobile-menu[hidden] {
+  display: none;
+}
+.mobile-menu li {
+  border-bottom: 1px solid var(--line);
+  animation: menu-in 420ms var(--ease-out) both;
+  animation-delay: calc(var(--i) * 40ms);
+}
+.mobile-menu a:not(.btn) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.05rem 0.25rem;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.mobile-menu a.active {
+  color: var(--brand);
+}
+.mobile-menu a svg {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+.mobile-menu__footer {
+  display: grid;
+  gap: var(--space-s);
+  padding-top: var(--space-xl);
+}
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu li {
+    animation: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .site-nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+@media (max-width: 479px) {
+  .site-header .site-header__cta {
+    display: none;
+  }
+}
